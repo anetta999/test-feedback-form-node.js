@@ -1,9 +1,9 @@
 const Joi = require("joi");
 
 const createFeedbackValidationSchema = Joi.object({
-    name: Joi.string().min(2).max(15).required(),
-    email: Joi.string().email().required(),
-    message: Joi.string().min(4).required(),
+    name: Joi.string().min(2).max(15),
+    email: Joi.string().email(),
+    message: Joi.string().min(4),
 });
 
 module.exports = createFeedbackValidationSchema;
